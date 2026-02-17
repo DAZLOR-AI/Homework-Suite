@@ -1,31 +1,90 @@
 # Homework Suite
 
-## Project Documentation
+Homework Suite is a cross-platform homework gaming platform for students (ages 6–25+), with companion tools for teachers and parents.
 
-### Overview
-Homework Suite is a project designed to help students manage their homework and tasks efficiently.
+## What is in this repository
+This repo includes a multi-app MVP scaffold:
 
-### Features
-- Task management
-- Deadline tracking
-- Notifications
+- `apps/web` — Next.js web app inspired by the attached mobile-first UI aesthetic.
+- `apps/mobile` — Expo React Native app for iOS + Android.
+- `services/api` — Express + TypeScript backend with core MVP endpoints.
+- `packages/domain` — Shared domain types for cross-platform consistency.
+- `docs/` — Product requirements, architecture, roadmap, and screenshot preview assets.
 
-### Installation
-1. Clone the repo: `git clone https://github.com/DAZZER-AI/Homework-Suite.git`
-2. Install the dependencies: `npm install`
+## MVP Features Implemented
+- Student dashboard UI redesigned with a Notion-inspired layout (sidebar, calm productivity surfaces, and playful quest personality).
+- Mobile dashboard refreshed to match the Notion-with-personality direction (clean cards, quick stats, emoji-rich quest board, strong focus CTA).
+- Backend endpoints aligned with the requested API skeleton:
+  - `POST /api/auth/register`
+  - `POST /api/auth/login`
+  - `POST /api/homework/upload`
+  - `POST /api/homework/parse`
+  - `GET /api/games/:homeworkId`
+  - `POST /api/games/:gameId/answer`
+  - `GET /api/progress/user/:userId`
+  - `GET /api/leaderboard/:scope`
 
-### Usage
-Run the application with `npm start`.
+## Quick Start
+### 1) Install dependencies
+```bash
+npm install
+```
 
-### Contributing
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a pull request
+### 2) Run web app
+```bash
+npm run dev:web
+```
 
-### License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+### 3) Run API
+```bash
+npm run dev:api
+```
 
-### Acknowledgements
-Thanks to all the contributors and supporters!
+### 4) Run mobile app (Expo)
+```bash
+npm run dev:mobile
+```
+
+## Checks and Tests
+- Structural smoke check:
+  ```bash
+  npm run test:smoke
+  ```
+- Type checks:
+  ```bash
+  npm run check
+  ```
+
+> Note: in restricted environments where npm registry access is blocked (HTTP 403), dependency installation and framework-level typechecks cannot complete. Use `npm run test:smoke` as a minimal offline verification.
+
+## Production Screenshots
+### Web Dashboard
+![Homework Suite Web Dashboard](docs/screenshots/web-production.svg)
+
+### Mobile Dashboard
+![Homework Suite Mobile Dashboard](docs/screenshots/mobile-production.svg)
+
+## UI Preview Assets
+Static preview pages used for screenshot generation are available at:
+- `docs/screenshots/web-preview.html`
+- `docs/screenshots/mobile-preview.html`
+- `docs/screenshots/TROUBLESHOOTING.md`
+
+## Screenshot Capture (Fix for Black Screens)
+If screenshot artifacts appear black/blank, follow the troubleshooting checklist:
+- `docs/screenshots/TROUBLESHOOTING.md`
+
+Recommended capture flow:
+1. `python3 -m http.server 8000`
+2. Capture from `http://127.0.0.1:8000/docs/screenshots/web-preview.html` and `.../mobile-preview.html`
+3. Wait for selectors before screenshot (`main` / `.phone`)
+
+
+## Product Direction
+See:
+- `docs/PRODUCT_REQUIREMENTS.md`
+- `docs/ARCHITECTURE.md`
+- `docs/ROADMAP.md`
+
+## License
+MIT — see [LICENSE](LICENSE).

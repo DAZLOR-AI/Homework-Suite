@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Homework Suite — Notion Personality Web</title>
+  <style>
+    body{margin:0;font-family:Inter,system-ui;background:linear-gradient(120deg,#f8f7f4,#f2efe9);color:#2f3437}
+    .shell{max-width:1320px;margin:0 auto;padding:16px;display:grid;grid-template-columns:270px 1fr;gap:12px}
+    .card{background:#fff;border:1px solid #e9e7e2;border-radius:16px}
+    .sidebar{padding:14px;display:grid;gap:8px;align-content:start}
+    .nav{padding:10px;border-radius:10px}.nav.active{background:#f3f2ef;font-weight:700}
+    .side-note{padding:10px;background:#fff;border:1px solid #e9e7e2;border-radius:12px}
+    .content{display:grid;gap:12px}
+    .top{display:grid;grid-template-columns:1fr auto auto;gap:8px;padding:8px}
+    .search{padding:10px;background:#fff;border:1px solid #e9e7e2;border-radius:12px;color:#787774}
+    .btn{border:0;border-radius:999px;padding:10px 14px;font-weight:700}
+    .ghost{background:#f2f1ee;color:#52514d}.accent{background:#6d5dfc;color:#fff}
+    .hero{padding:16px;display:flex;justify-content:space-between;align-items:end;gap:12px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+    .item{padding:12px;border-left:6px solid #6d5dfc}
+    .quests{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+    .quest{padding:12px;display:grid;gap:8px}
+    .meta{font-size:12px;color:#787774}.pill{background:#efedff;color:#4b3ecf;border-radius:999px;padding:2px 8px}
+    .row{display:flex;justify-content:space-between;align-items:center}
+    .stats{padding:14px;display:grid;grid-template-columns:2fr 1fr;gap:14px}
+  </style>
+</head>
+<body>
+<main class="shell">
+  <aside class="card sidebar">
+    <h1 style="margin:0">Homework Suite</h1><small style="color:#787774">LEARNING OS</small>
+    <div class="nav active">Home</div><div class="nav">Play</div><div class="nav">Progress</div><div class="nav">Assignments</div>
+    <div class="side-note"><small style="color:#787774">STREAK</small><h3 style="margin:6px 0">7 days 🔥</h3><p style="margin:0;color:#787774">One more day unlocks cosmic confetti.</p></div>
+  </aside>
+  <section class="content">
+    <div class="card top"><div class="search">🔎 Search quests, notes, classes...</div><button class="btn ghost">🔔</button><button class="btn ghost">✨ Alex</button></div>
+    <div class="card hero"><div><small style="color:#787774">TODAY'S PLAN</small><h2 style="margin:8px 0">Finish 3 quests, earn 600 XP, keep your mastery streak alive.</h2><p style="margin:0;color:#787774">Notion-like calm layout, game-like dopamine loop.</p></div><button class="btn accent">Start Focus Session</button></div>
+    <div class="grid"><div class="card item"><h3>Math</h3><p>1240 XP · 7-day streak</p></div><div class="card item" style="border-left-color:#10b981"><h3>Science</h3><p>860 XP · 4-day streak</p></div><div class="card item" style="border-left-color:#f59e0b"><h3>Reading</h3><p>970 XP · 6-day streak</p></div></div>
+    <div class="quests">
+      <div class="card quest"><div class="row"><strong>Math</strong><span class="pill">Level 3</span></div><h3>Fractions Boss Battle</h3><p class="meta">⏱️ 18 min • ⭐ +220 XP</p></div>
+      <div class="card quest"><div class="row"><strong>Science</strong><span class="pill">Level 2</span></div><h3>Cell Explorer Lab</h3><p class="meta">⏱️ 14 min • ⭐ +150 XP</p></div>
+      <div class="card quest"><div class="row"><strong>Reading</strong><span class="pill">Level 4</span></div><h3>Theme Detective</h3><p class="meta">⏱️ 22 min • ⭐ +290 XP</p></div>
+    </div>
+    <div class="card stats"><div><small style="color:#787774">WEEKLY SNAPSHOT</small><h2 style="margin:8px 0">Level 12 Explorer</h2><p style="margin:0;color:#787774">88% mastery • +14% faster than last week.</p></div><ul style="margin:0"><li>🔥 7-day streak</li><li>🏆 Top 10 class</li><li>🧠 Algebra Basics Mastered</li></ul></div>
+  </section>
+</main>
+</body>
+</html>
