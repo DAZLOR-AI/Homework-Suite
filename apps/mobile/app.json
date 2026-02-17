@@ -1,0 +1,17 @@
+{
+  "expo": {
+    "name": "Homework Suite",
+    "slug": "homework-suite",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "platforms": ["ios", "android"],
+    "ios": {
+      "supportsTablet": true,
+      "deploymentTarget": "15.0"
+    },
+    "android": {
+      "minSdkVersion": 29
+    }
+  }
+}

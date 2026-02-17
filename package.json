@@ -1,0 +1,17 @@
+{
+  "name": "homework-suite",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/*",
+    "services/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:web": "npm run dev --workspace @homework-suite/web",
+    "dev:mobile": "npm run start --workspace @homework-suite/mobile",
+    "dev:api": "npm run dev --workspace @homework-suite/api",
+    "check": "npm run typecheck --workspace @homework-suite/web && npm run typecheck --workspace @homework-suite/api",
+    "test:smoke": "node scripts/validate-structure.mjs"
+  }
+}
