@@ -1,4 +1,3 @@
-# Homework Suite
 
 Homework Suite is a cross-platform homework gaming platform for students (ages 6–25+), with companion tools for teachers and parents.
 
